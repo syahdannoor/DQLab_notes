@@ -409,6 +409,80 @@ print(total_harga + total_pajak)
 Python Operators
 =
 
+## Pendahuluan
+
+Di dalam Python, operator terbagi ke dalam 6 kelompok:
+
+1. Arithmetic operators
+
+2. Assignment operators
+
+3. Comparison operators
+
+4. Logical operators
+
+5. Identity operators
+
+6. Membership operators
+
+## Arithmetic Operators
+
+Operator arithmetic digunakan pada tipe data numerik, untuk melakukan operasi matematika sederhana yang terdiri atas:
+
+| Simbol Operator | Keterangan | Contoh |
+| --- | --- | --- |
+| \+ | Penambahan | 3 + 2 akan menghasilkan output: 5 |
+| \- | Pengurangan | 4 - 2 akan menghasilkan output: 2 |
+| \* | Perkalian | 3 * 2 akan menghasilkan output: 6 |
+| \/ | Pembagian | 3 / 2 akan menghasilkan output: 1.5 |
+| \% | Modulo/sisa bagi | 3 % 2 akan menghasilkan output: 1. dikarenakan 3 tidak habis dibagi 2 dan menyisakan 1. 8 % 2 akan menghasilkan output: 0. dikarenakan 8 habis dibagi 2 |
+| \** | Pangkat | 3 ** 2 akan menghasilkan output: 9 |
+| \// | Pembagian dengan pembulatan ke bawah | 3 // 2 akan menghasilkan output: 1. dikarenakan 1.5 akan menjadi 1 saat dibulatkan ke bawah. |
+
+## Assignment Operators
+
+Operator assignment digunakan untuk mendeklarasikan nilai secara langsung ke suatu variabel.
+
+| Simbol Operator | Keterangan                           | Contoh                                                                         |
+| --------------- | ------------------------------------ | ------------------------------------------------------------------------------ |
+| +=              | Penambahan                           | `x = 3` `x += 2` ekivalen dengan x = x + 2 akan mengubah nilai x menjadi 5     |
+| \-=             | Pengurangan                          | `x = 3 ` `x -= 2` ekivalen dengan x = x - 2 akan mengubah nilai x menjadi 1    |
+| \*=             | Perkalian                            | `x = 3` `x \*= 2` ekivalen dengan x = x \* 2 akan mengubah nilai x menjadi 6   |
+| /=              | Pembagian                            | `x = 3` `x /= 2` ekivalen dengan x = x / 2 akan mengubah nilai x menjadi 1.5   |
+| %=              | Modulo/sisa bagi                     | `x = 3` `x %= 2` ekivalen dengan x = x % 2 akan mengubah nilai x menjadi 1     |
+| \*\*=           | Pangkat                              | `x = 3` `x \*\*= 2` ekivalen dengan x = x \*\* 2 akan mengubah nilai x menjadi 9 |
+| //=             | Pembagian dengan pembulatan ke bawah | `x = 3` `x //= 2` sama dengan x = x // 2 akan mengubah nilai x menjadi 1       |
+
+## Comparison Operators
+
+Operator comparison dapat digunakan untuk membandingkan dua buah nilai, berikut merupakan contoh-contoh operator komparasi.
+
+| Simbol Operator | Keterangan                   | Contoh                                                                                                                                                                                                                                                     |
+| --------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `==`             | Persamaan                    | `33 == 33 akan menghasilkan output: True dikarenakan benar 33 sama dengan 33` `34 == 33 akan menghasilkan output: False dikarenakan 34 tidak sama dengan 33`                                                                                               |
+| `!=`              | Pertidaksamaan               | `34 != 33 akan menghasilkan output: True dikarenakan benar bahwa 34 tidak sama dengan 33` `33 != 33 akan menghasilkan output: False dikarenakan 33 sama dengan 33`                                                                                        |
+| `>`              | Lebih besar dari             | `34 > 33 akan menghasilkan output: True dikarenakan 34 lebih besar dari 33` `33 > 34 akan menghasilkan output False dikarenakan tidak benar 33 lebih besar dari 34`                                                                                     |
+| `<`               | Lebih kecil dari             | `33 < 34 akan menghasilkan output True dikarenakan benar 33 lebih kecil dari 34` `34 < 33 akan menghasilkan output: False dikarenakan tidak benar 34 lebih kecil dari 33`                                                                                    |
+| `>=`             | Lebih besar atau sama dengan | `34 >= 33 akan menghasilkan output True dikarenakan 34 lebih besar dari 33` `34 >= 34 akan menghasilkan output True dikarenakan 34 sama dengan 34` `33 >= 34 akan menghasilkan output False dikarenakan 33 tidak lebih besar dari 34 dan tidak sama dengan 34` |
+| `<=`              | Lebih kecil atau sama dengan | `33 <= 34 akan menghasilkan output True dikarenakan 33 lebih kecil dari 34` `33 <= 33 akan menghasilkan output True dikarenakan 34 sama dengan 33` `34 <= 33 akan menghasilkan output False dikarenakan 34 tidak lebih kecil dari 33 dan tidak sama dengan 34` |
+
+## Logical Operators
+
+Operator logical digunakan untuk menggabungkan beberapa nilai kebenaran atas suatu statemen logika.
+
+| Simbol Operator | Keterangan | Contoh |
+| --- | --- | --- |
+| `and` | dan - menerima dua nilai kebenaran dan mengembalikan nilai benar jika keduanya benar | `x = 5` `x >= 1 and x <= 10` akan mengembalikan nilai True `x = 5` `x >= 1 and x <= 4` akan mengembalikan nilai **False** |
+| `or` | atau - menerima dua nilai kebenaran dan mengembalikan nilai benar jika salah satu benar | `x = 3` `x >= 1 or x <= 2` akan mengembalikan nilai **True** dikarenakan statemen logika pertama terpenuhi `x = 3` `x >= 5 or x <= 0` akan mengembalikan nilai **False** dikarenakan kedua statemen logika tidak terpenuhi (bernilai False) |
+| `not` | negasi - menerima sebuah nilai kebenaran dan mengembalikan komplemennya | `x = 7` `not(x == 7)` akan mengembalikan nilai **False** `not(x >= 10)` akan mengembalikan nilai **True** |
+
+## Identity Operators
+## Membership Operators
+## Nilai Prioritas Operator dalam Python – Part 1
+## Nilai Prioritas Operator dalam Python – Part 2
+## Quiz
+## Tugas Praktek
+
 
 Pythons Conditioning & Looping
 =

@@ -140,3 +140,4 @@ import pandas as pd
 import seaborn as sns
 ```
 
+[Introduction to Data Science with Python](https://academy.dqlab.id/certificate/pdf/DQLABINTP1HIWUKW)

@@ -477,15 +477,325 @@ Operator logical digunakan untuk menggabungkan beberapa nilai kebenaran atas sua
 | `not` | negasi - menerima sebuah nilai kebenaran dan mengembalikan komplemennya | `x = 7` `not(x == 7)` akan mengembalikan nilai **False** `not(x >= 10)` akan mengembalikan nilai **True** |
 
 ## Identity Operators
+
+Operator identitas dapat digunakan untuk membandingkan identitas dari dua buah variabel.
+
+| Simbol Operator | Keterangan | Contoh |
+| --- | --- | --- |
+| `is` | Menerima dua buah objek dan mengembalikan nilai _True_ ketika keduanya merujuk pada objek yang sama dan _False_ dalam kondisi lainnya | `x = ["Ani", "Budi"]` `y = ["Ani", "Budi"]` `a = x` `print(a is x)` akan menampilkan nilai True dikarenakan a dan x merujuk ke objek yang sama `print(a is y)` akan menampilkan nilai False dikarenakan a dan y tidak merujuk ke objek yang sama meskipun isi di dalam keduanya sama. |
+| `is not` | Menerima dua buah objek dan mengembalikan nilai _True_ ketika keduanya merujuk pada objek yang berbeda dan _False_ jika sama | `x = ["Ani", "Budi"]` `y = ["Ani", "Budi"]` `a = x` `print(a is not x)` akan menampilkan nilai False dikarenakan a dan x merujuk ke objek yang sama `print(a is not y)` akan menampilkan nilai True dikarenakan a dan y tidak merujuk ke objek yang sama |
+
+Pada umumnya, operator identitas sering digunakan bersamaan dengan fungsi type(), yang mana fungsi type() akan menerima sebuah objek dan mengembalikan tipe data dari objek tersebut. Di bawah ini adalah contoh penggunaan operator identitas dan fungsi type().
+
+![image](https://user-images.githubusercontent.com/20697667/159674330-ca61553b-2e89-40f0-83da-03c8305157bf.png)
+
+akan menampilkan pesan True.
+
+Setelah line di bawah ini selesai dieksekusi, Python akan secara otomatis mengubah tipe data dari x menjadi float
+
+![image](https://user-images.githubusercontent.com/20697667/159674539-255ae3fd-628b-44e0-ac1d-d394d42a324b.png)
+
+akan menampilkan pesan False, dan
+
+![image](https://user-images.githubusercontent.com/20697667/159674618-36a1d8e5-9200-4e1d-8ada-6808d1120182.png)
+
+akan menampilkan pesan True
+
 ## Membership Operators
+
+Operator keanggotaan (membership) dapat digunakan untuk memeriksa anggota dari sebuah tipe data sequence/set. Operator keanggotaan meliputi:
+
+| Simbol Operator | Keterangan | Contoh |
+| --- | --- | --- |
+| `in` | Menerima sebuah _sequence/set_ dan objek, mengembalikan True ketika objek merupakan anggota dari _sequence/set_, dan False ketika bukan. | `x = ["Ani", "Budi", "Cici"]` `y = "Cici"` `z = "Dodi"` `print(y in x)` akan menampilkan nilai True `print(z in x)` akan menampilkan nilai False |
+| `not in` | Menerima sebuah _sequence/set_ dan objek, mengembalikan True ketika objek bukan merupakan anggota dari _sequence/set_, dan False ketika merupakan. | `x = ["Ani", "Budi", "Cici"]` `y = "Cici"` `z = "Dodi"` `print(y not in x)` akan menampilkan nilai  False `print(z not in x)` akan menampilkan nilai True |
+
+
 ## Nilai Prioritas Operator dalam Python – Part 1
+
+program menghitung diskon dan pajak pembelian berdasarkan ilmu yang telah aku pelajari, aku dapat menuliskannya dengan potongan kode berikut:
+
+![image](https://user-images.githubusercontent.com/20697667/159675693-d4d99455-725d-4251-b5d6-5c71afff6212.png)
+
+cara lebih mudah dengan menjelaskan presedensi (urutan eksekusi) dari operator.
+
+![image](https://user-images.githubusercontent.com/20697667/159675762-9b9b1560-be5c-4406-95fb-a5a7a3b41461.png)
+
+hitung harga yang harus dibayarkan menggunakan barang senilai 150,000, dengan diskon 30% dan pajak 10%
+
+```python
+# Kode awal
+total_harga = 150000
+potongan_harga = 0.3
+pajak = 0.1 # pajak dalam persen ~ 10%
+harga_bayar = 1 - potongan_harga # baris pertama
+harga_bayar *= total_harga # baris kedua
+pajak_bayar = pajak * harga_bayar # baris ketiga
+harga_bayar += pajak_bayar # baris ke-4
+print("Kode awal - harga_bayar=", harga_bayar)
+# Penyederhanaan baris kode dengan menerapkan prioritas operator
+total_harga = 150000
+potongan_harga = 0.3
+pajak = 0.1 # pajak dalam persen ~ 10%
+harga_bayar = (1 - potongan_harga) * total_harga #baris pertama 
+harga_bayar += harga_bayar * pajak # baris kedua
+print("Penyederhanaan kode - harga_bayar=", harga_bayar)
+```
+
+```
+Kode awal - harga_bayar= 115500.0
+Penyederhanaan kode - harga_bayar= 115500.0
+```
+
 ## Nilai Prioritas Operator dalam Python – Part 2
-## Quiz
+
+Dalam bahasa pemrograman Python, tabel berikut mencakup nilai prioritas dan arah pengerjaan dari setiap operator.
+
+| Operator | Nilai Prioritas | Arah pengerjaan | Deskripsi |
+| --- | --- | --- | --- |
+| `()` | 10 | Kiri ke kanan | Grouping |
+| `x[index]` | 9 | Kiri ke kanan | Mengakses elemen array |
+| `**` | 8 | Kanan ke kiri | pangkat |
+| `+x` `-x` | 7 | Kiri ke kanan | Tanda bilangan positif dan negatif |
+| `*` `/` `%` | 6 | Kiri ke kanan | Perkalian Pembagian Modulus |
+| `+` `-` | 5 | Kiri ke kanan | Penambahan Pengurangan |
+| `is, is not, in, not in` `<=, <, >=, >` `==, !=` | 4 | Kiri ke kanan | Membership operator Comparison Operator |
+| `not` | 3 | Kiri ke kanan | Operator logika negasi (not) |
+| `and` | 2 | Kiri ke kanan | Operator logika konjungsi (and) |
+| `or` | 1 | Kiri ke kanan | Operator logika disjungsi (or) |
+
+Dari tabel di atas, dapat terlihat bahwa tanda `()` memiliki nilai prioritas yang paling tinggi. Hal itu menandakan jika di dalam suatu statemen yang melibatkan beberapa operator secara sekaligus, setiap operasi yang berada di dalam tanda `()` akan dikerjakan terlebih dahulu.
+Kemudian, jika terdapat beberapa operasi dalam tanda `()`, tanda kurung yang berada di sebelah paling kiri akan dikerjakan terlebih dahulu dikarenakan arah pengerjaan dari tanda `()` adalah dari kiri ke kanan.
+
+Sebagai contoh, pada proses deklarasi variabel nilai di bawah ini.
+
+![image](https://user-images.githubusercontent.com/20697667/159678261-5f799f02-cf40-467d-8785-952335501887.png)
+
+Dari contoh di atas, meskipun operator perkalian `*` memiliki nilai prioritas yang lebih tinggi dari operator pengurangan `-`, tanda `()` akan membuat Python mengerjakan bagian pengurangan terlebih dahulu, sebelum akhirnya mengalikan hasil pengurangan dengan bilangan 100.
+
+![image](https://user-images.githubusercontent.com/20697667/159678417-505dbd9e-f29b-443a-877f-bf90129912e4.png)
+
 ## Tugas Praktek
 
+![image](https://user-images.githubusercontent.com/20697667/159679096-63883634-196d-4b05-a678-29d6f7b1b5f6.png)
+
+```python
+sepatu = { "nama" : "Sepatu Niko", "harga": 150000, "diskon": 30000 }
+baju = { "nama" : "Baju Unikloh", "harga": 80000, "diskon": 8000 }
+celana = { "nama" : "Celana Lepis", "harga": 200000, "diskon": 60000 }
+harga_sepatu = sepatu["harga"] - sepatu["diskon"]
+harga_baju = baju["harga"] - baju["diskon"]
+harga_celana = celana["harga"] - celana["diskon"]
+total_harga = (harga_sepatu + harga_baju + harga_celana) * 1.1 
+print(total_harga)
+```
+
+```
+365200.00000000006
+``` 
 
 Pythons Conditioning & Looping
 =
+
+## Python Conditioning for Decision – Part 1
+
+Layaknya bahasa pemrograman lainnya, bahasa pemrograman Python menyediakan statemen desisi (decision statement) untuk berinteraksi dengan variabel bertipe boolean dan operator logika. Statemen desisi dalam Python dapat dituliskan dengan menggunakan format berikut:
+
+```python
+if conditions:
+    do_action_1
+    ...
+    do_action_n
+```
+Dengan <conditions> berisikan operator yang mengembalikan nilai kebenaran; ataupun beberapa operator yang mengembalikan nilai kebenaran, yang digabungkan dengan operator logika.  Melalui  sebuah statemen desisi (if statement), <do_action_1> sampai dengan <do_action_n> akan dijalankan saat <conditions> bernilai True.
+
+Dalam menuliskan serangkaian aksi (<do_action_1>, ... , <do_action_n>) dalam sebuah statemen if, aku harus mengemas setiap aksi dalam sebuah blok dengan menambahkan indentasi (jorokan) dari pada aksi.
+
+## Python Conditioning for Decision – Part 2
+
+```python
+# Statement if
+x = 4
+if x % 2 == 0: # jika sisa bagi x dengan 2 sama dengan 0
+    print("x habis di bagi dua") # statemen aksi lebih menjorok ke dalam
+# Statement if ... elif ... else
+x = 7
+if x % 2 == 0: # jika sisa bagi x dengan 2 sama dengan 0
+    print("x habis di bagi dua")
+elif x % 3 == 0: # jika sisa bagi x dengan 3 sama dengan 0
+    print("x habis di bagi tiga")
+elif x % 5 == 0: # jika sisa bagi x dengan 5 sama dengan 0
+    print("x habis di bagi lima")
+else:
+    print("x tidak habis di bagi dua, tiga ataupun lima")  
+```  
+
+```
+x habis di bagi dua
+x tidak habis di bagi dua, tiga ataupun lima
+```  
+
+## Python Conditioning for Decision – Part 3
+
+```python
+jam = 13
+if jam >= 5 and jam < 12: # selama jam di antara 5 s.d. 12
+    print("Selamat pagi!")
+elif jam >= 12 and jam < 17: # selama jam di antara 12 s.d. 17
+    print("Selamat siang!")
+elif jam >= 17 and jam < 19: # selama jam di antara 17 s.d. 19
+    print("Selamat sore!")
+else: # selain kondisi di atas
+    print("Selamat malam!")
+```
+
+```
+Selamat siang! 
+```
+          
+## Tugas Praktek
+
+Tagihan untuk Mr. Yoyo
+
+| Nama Jasa           | Harga per hari | Total hari | Subtotal |
+| ------------------- | -------------- | ---------- | -------- |
+| Data Warehousing    | 1000000        | 15         | 15000000 |
+| Data Cleansing      | 1500000        | 10         | 15000000 |
+| Data Integration    | 2000000        | 15         | 30000000 |
+| Data Transformation | 2500000        | 10         | 25000000 |
+|                     |                | Total      | 85000000 |
+                            
+```python
+tagihan_ke = 'Mr. Yoyo'
+warehousing = { 'harga_harian': 1000000, 'total_hari':15 } 
+cleansing = { 'harga_harian': 1500000, 'total_hari':10 } 
+integration = { 'harga_harian':2000000, 'total_hari':15 } 
+transform = { 'harga_harian':2500000, 'total_hari':10 }
+sub_warehousing = warehousing ['harga_harian'] * warehousing ['total_hari']
+sub_cleansing = cleansing ['harga_harian'] * cleansing ['total_hari']
+sub_integration = integration ['harga_harian'] * integration ['total_hari']
+sub_transform = transform ['harga_harian'] * transform ['total_hari']
+total_harga = sub_warehousing + sub_cleansing + sub_integration + sub_transform
+print("Tagihan kepada:") 
+print(tagihan_ke)
+print("Selamat pagi, anda harus membayar tagihan sebesar:") 
+print(total_harga)
+```                            
+                            
+```
+Tagihan kepada:
+Mr. Yoyo
+Selamat pagi, anda harus membayar tagihan sebesar:
+85000000
+```
+                            
+## Tugas Praktek
+
+masukkan variabel keterangan waktu tersebut di kodemu. Lalu, diatur dengan detail berikut:
+
+1. Diatas jam 07 malam adalah salam 'selamat malam'
+2. Diatas jam 05 sore adalah salam 'selamat sore'
+3. Diatas jam 12 siang, adalah 'selamat siang'
+4. dan selain itu 'selamat pagi'
+
+```python
+jam = 17
+tagihan_ke = 'Mr. Yoyo'
+warehousing = { 'harga_harian': 1000000, 'total_hari':15 } 
+cleansing = { 'harga_harian': 1500000, 'total_hari':10 } 
+integration = { 'harga_harian':2000000, 'total_hari':15 } 
+transform = { 'harga_harian':2500000, 'total_hari':10 }
+sub_warehousing = warehousing['harga_harian']*warehousing['total_hari'] 
+sub_cleansing = cleansing['harga_harian']*cleansing['total_hari'] 
+sub_integration = integration['harga_harian']*integration['total_hari'] 
+sub_transform = transform['harga_harian']*transform['total_hari']
+total_harga = sub_warehousing+sub_cleansing+sub_integration+sub_transform
+print("Tagihan kepada:")
+print(tagihan_ke)
+if jam > 19:
+    print("Selamat malam, anda harus membayar tagihan sebesar:")
+elif jam > 17:
+    print("Selamat sore, anda harus membayar tagihan sebesar:") 
+elif jam > 12:
+    print("Selamat siang, anda harus membayar tagihan sebesar:")
+else:
+    print("Selamat pagi, anda harus membayar tagihan sebesar:") 
+print(total_harga)
+```
+
+```  
+Tagihan kepada:
+Mr. Yoyo
+Selamat siang, anda harus membayar tagihan sebesar:
+85000000
+```
+## Python Primitive Loop Control
+  
+Loop Control merupakan salah satu fitur yang mengizinkan penggunanya untuk melakukan serangkaian aksi, selama suatu kondisi yang telah ditetapkan bernilai benar. Dalam Python, terdapat dua bentuk primitif dari loop kontrol (struktur pengulangan), yaitu
+
+- while loops
+- for loops
+
+
+## Python while loops – Part 1
+
+```python
+# Tagihan
+tagihan = [50000, 75000, 125000, 300000, 200000]
+# Tanpa menggunakan while loop
+total_tagihan = tagihan[0] + tagihan[1] + tagihan[2] + tagihan[3] + tagihan[4]
+print(total_tagihan)
+# Dengan menggunakan while loop
+i = 0 # sebuah variabel untuk mengakses setiap elemen tagihan satu per satu
+jumlah_tagihan = len(tagihan) # panjang (jumlah elemen dalam) list tagihan
+total_tagihan = 0 # mula-mula, set total_tagihan ke 0
+while i < jumlah_tagihan: # selama nilai i kurang dari jumlah_tagihan
+    total_tagihan += tagihan[i] # tambahkan tagihan[i] ke total_tagihan
+    i += 1 # tambahkan nilai i dengan 1 untuk memproses tagihan selanjutnya.
+print(total_tagihan)
+```
+
+```                         
+750000
+750000
+```
+
+## Python while loops – Part 2
+                         
+```python
+tagihan = [50000, 75000, -150000, 125000, 300000, -50000, 200000]
+i = 0
+jumlah_tagihan = len(tagihan)
+total_tagihan = 0
+while i < jumlah_tagihan:
+    # jika terdapat tagihan ke-i yang bernilai minus (di bawah nol),
+    # pengulangan akan dihentikan
+    if tagihan[i] < 0:
+        total_tagihan = -1
+        print("terdapat angka minus dalam tagihan, perhitungan dihentikan!")
+        break
+    total_tagihan += tagihan[i]
+    i += 1
+print(total_tagihan)
+```
+
+```
+terdapat angka minus dalam tagihan, perhitungan dihentikan!
+-1
+```
+## Python while loops – Part 3
+
+
+## Python for loops – Part 1
+
+
+## Python for loops – Part 2
+
+
+## Python for loops – Part 3
+
+
+## Tugas Praktek
 
 Mini Quiz
 =

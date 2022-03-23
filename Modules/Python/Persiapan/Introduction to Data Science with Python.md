@@ -119,6 +119,12 @@ print(tuple(text))
 print(set(text))
 ```
 
+```
+['B', 'e', 'l', 'a', 'j', 'a', 'r', ' ', 'P', 'y', 't', 'h', 'o', 'n', ' ', 'd', 'i', ' ', 'D', 'Q', 'L', 'a', 'b', '.']
+('B', 'e', 'l', 'a', 'j', 'a', 'r', ' ', 'P', 'y', 't', 'h', 'o', 'n', ' ', 'd', 'i', ' ', 'D', 'Q', 'L', 'a', 'b', '.')
+{'d', 'B', 'o', ' ', 'y', 'h', 'n', 'i', 'b', 'D', 'e', 'r', 'L', '.', 'P', 'Q', 'a', 'l', 't', 'j'}
+```
+
 ## Menggunakan Library di Python
 
 Menggunakan perintah import nama_library atau import nama_library as alias.

@@ -1,5 +1,7 @@
-Mari Mengenal Python
-=
+# Mari Mengenal Python
+
+Apa itu bahasa pemograman Python, "Hello World" di Python, dan struktur bahasa pemograman Python.
+
 ## Pengantar
 
 ## Mari Mengenal Python

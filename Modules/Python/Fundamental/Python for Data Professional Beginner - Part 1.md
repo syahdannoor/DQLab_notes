@@ -3,6 +3,7 @@
 Apa itu bahasa pemograman Python, "Hello World" di Python, dan struktur bahasa pemograman Python.
 
 ## Apa dan Kenapa Python – Part 1?
+
 ![image](https://user-images.githubusercontent.com/20697667/159636002-67f463e2-65b1-4fdd-b7a8-f3e4d40efed7.png)
 
 
@@ -26,6 +27,7 @@ Selain alasan di atas terdapat beberapa alasan lain untuk menggunakan bahasa pem
 3. Python terintegrasi dengan baik dengan berbagai macam bahasa pemrograman dan layanan enterprise. Untuk bagian-bagian yang melibatkan sumber daya komputasi yang besar, pengembang dapat menggunakan fungsionalitas dalam bahasa pemrograman lainnya yang bersifat low-level yang telah dikemas ke dalam fungsionalitas Python.
 
 ## Program pertama: "Hello World"
+
 ```python
 print("Hello World!")
 ```
@@ -34,6 +36,7 @@ Hello World!
 ```
 
 ## Program Pertamaku
+
 ```python
 print("Halo Dunia")
 print("Riset Bahasa Python")
@@ -44,6 +47,7 @@ Riset Bahasa Python
 ```
 
 ## Struktur Program Python - Part 1
+
 sebuah program Python pada umumnya terdiri dari:
 
 1. Statements: Instruksi yang diberikan secara baris per baris untuk dijalankan oleh mesin. Contoh:
@@ -82,6 +86,7 @@ Hello World!
 ```
 
 ## Tugas Praktek
+
 Deklarasi variable bilangan1 dengan 20, dan bilangan2 dengan 10 dan tampilkan hasil pengurangan bilangan1 & bilangan 2.
 ```python
 bilangan1 = 20
@@ -93,6 +98,7 @@ print(bilangan1 - bilangan2)
 ```
 
 ## Tugas Praktek
+
 kalkulator sederhana untuk potongan harga dan pajak
 
 1. Aku diminta menghitung harga_setelah_potongan dan harga_final. harga_final diperoleh dengan mengalikan harga_setelah_potongan dengan angka 1.1 karena PPN sebesar 10% (100% + 10% = 110% atau 1.1)
@@ -110,6 +116,7 @@ print(harga_final)
 ```
 
 ## Struktur Program Python - Part 2
+
 Berikut adalah hal-hal baru yang aku pelajari mengenai Python:
 
 1. Reserved Words: Kumpulan kata-kata yang memiliki makna khusus dalam bahasa pemrograman Python. Kata False, return, dan for merupakan contoh dari reserved words. 
@@ -135,6 +142,7 @@ Python Variables & Data Types
 ![image](https://user-images.githubusercontent.com/20697667/159652022-3ec63b09-3cba-40c5-9640-9d65d39ec9d2.png)
 
 ## Aturan Penamaan Python Variables
+
 Penamaan suatu variabel pada python dapat dikatakan valid selama memenuhi aturan-aturan berikut:
 
 1. Nama dari sebuah variabel harus dimulai dengan huruf (a-z, A-Z) atau karakter garis bawah underscore (_) dan tidak dapat dimulai dengan angka (0-9).
@@ -146,6 +154,7 @@ Selain dapat mendeklarasikan nilai dari suatu variabel secara baris per baris, a
 ![image](https://user-images.githubusercontent.com/20697667/159652391-b7a15cb4-589e-4418-9da4-5a32c230e1e4.png)
 
 ## Tipe Data Dasar: Null, Boolean, Numeric dan Text
+
 1. **Null Type**: Tipe data null dalam Python digunakan untuk menyimpan nilai kosong atau tidak ada yang dinyatakan dengan **None**.
 
 2. **Boolean Type**: Tipe data boolean atau **bool** digunakan untuk menyimpan nilai kebenaran (True, False) dari suatu ekspresi logika.
@@ -155,6 +164,7 @@ Selain dapat mendeklarasikan nilai dari suatu variabel secara baris per baris, a
 4. **Text Type**: Pada Python, tipe data string (**str**) digunakan untuk menyimpan data teks. Tipe data string dimulai dengan tanda kutip (baik kutip satu/ dua) dan diakhir dengan tanda kutip. Contoh: "Teks", "Contoh teks menggunakan Python", dan 'Teks pada Python'.
 
 ## Sequence Type – Part 1
+
 Tipe data ini digunakan untuk menampung sekumpulan data secara terorganisir.
 
 Bentuk dari tipe data sequence ini adalah **List** dan **Tuple**.
@@ -203,6 +213,7 @@ empat
 ```
 
 ## Sequence Type – Part 2
+
 Tipe data tuple juga berfungsi untuk menampung sekumpulan data. Tipe data ini diawali dengan tanda kurung buka ( `(` ), memisahkan setiap elemen di dalamnya dengan tanda koma ( `,` ) dan ditutup dengan tanda kurung tutup ( `)` ). Sebagai contoh:
 
 ![image](https://user-images.githubusercontent.com/20697667/159656745-ebc03acf-0f0b-40f3-bc99-47bea3fadb6a.png)
@@ -270,7 +281,7 @@ Dari kedua contoh output pada program, dapat terlihat:
 
 1. Berbeda dengan tipe data set, tipe data list memperdulikan urutan dari setiap elemen saat list dideklarasikan.
 
-2. Berbeda dengan list yang mengizinkan adanya duplikasi elemen, **tipe data set tidak mengizinkan adanya elemen dengan nilai yang sama di dalamnya. **
+2. Berbeda dengan list yang mengizinkan adanya duplikasi elemen, **tipe data set tidak mengizinkan adanya elemen dengan nilai yang sama di dalamnya.**
 
 Keunikan dari kedua tipe data ini tentunya menjadi pengetahuan yang berguna.
 
@@ -342,11 +353,62 @@ Programmer
 ```
 
 ## Tugas Praktek
+
+program kalkulator potongan harga ini untuk beberapa barang sekaligus agar lebih fungsional
+
+![image](https://user-images.githubusercontent.com/20697667/159662930-23e8c371-e76f-47bb-b040-8bf959fa0e09.png)
+
+```python
+sepatu = {"nama": "Sepatu Niko", "harga": 150000, "diskon": 30000 }
+baju = {"nama": "Baju Unikloh", "harga": 80000, "diskon": 8000}
+celana = {"nama": "Celana Lepis", "harga": 200000, "diskon": 60000}
+```
+
 ## Tugas Praktek
+
+```python
+sepatu = {"nama": "Sepatu Niko", "harga": 150000, "diskon": 30000 }
+baju = {"nama": "Baju Unikloh", "harga": 80000, "diskon": 8000}
+celana = {"nama": "Celana Lepis", "harga": 200000, "diskon": 60000}
+daftar_belanja = [sepatu, baju, celana]
+```
+
 ## Tugas Praktek
+
+Tips 1. # Data yang dinyatakan ke dalam dictionary
+
+Tips 2. # Hitung harga masing-masing data setelah dikurangi diskon
+
+Tips 3. # Hitung harga total
+
+Tips 4. # Hitung harga kena pajak
+
+Tips 5. # Cetak `total_harga + total_pajak`
+
+```python
+# Data yang dinyatakan ke dalam dictionary
+sepatu = {"nama": "Sepatu Niko", "harga": 150000, "diskon": 30000} 
+baju = {"nama": "Baju Unikloh", "harga": 80000, "diskon": 8000} 
+celana = {"nama": "Celana Lepis", "harga": 200000, "diskon": 60000}
+# Hitunglah harga masing-masing data setelah dikurangi diskon
+harga_sepatu = sepatu["harga"] - sepatu["diskon"] 
+harga_baju = baju["harga"] - baju["diskon"]
+harga_celana = celana["harga"] - celana["diskon"]
+# Hitung harga total
+total_harga = harga_sepatu + harga_baju + harga_celana
+# Hitung harga kena pajak
+total_pajak = total_harga * 0.1
+# Cetak total_harga + total_pajak
+print(total_harga + total_pajak)
+```
+
+```
+365200.0
+```
 
 Python Operators
 =
+
 
 Pythons Conditioning & Looping
 =

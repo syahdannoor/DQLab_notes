@@ -140,3 +140,4 @@ import pandas as pd
 import seaborn as sns
 ```
 
+[Certificate of Completion](https://academy.dqlab.id/certificate/pdf/DQLABINTP1GPIEIV/NONTRACK)

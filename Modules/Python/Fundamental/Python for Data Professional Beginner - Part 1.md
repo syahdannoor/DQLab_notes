@@ -938,3 +938,4 @@ print(total_pengeluaran)
 163500000
 ```
 
+[Python for Data Professional Beginner - Part 1](https://academy.dqlab.id/certificate/pdf/DQLABINTP1GPIEIV)

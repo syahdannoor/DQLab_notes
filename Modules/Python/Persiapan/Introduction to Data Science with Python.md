@@ -1,5 +1,7 @@
 Apa itu Python?
 =
+# Dasar Python
+
 Python adalah bahasa pemrograman yang ditujukan untuk general-purpose programming dan termasuk dalam kategori high-level programming language.
 
 Sebagai general-purpose programming language, Python digunakan untuk berbagai macam permasalahan seperti: pengembangan aplikasi web ataupun mobile, data science, dll.
@@ -71,7 +73,7 @@ salam = "Selamat Pagi"; Penutup = "Salam Sejahtera"
 ## Comments di Python
 Comments adalah sekumpulan teks yang dituliskan dalam sebuah program dan tidak akan mempengaruhi hasil dari sebuah program. Berikut adalah contoh penulisan single line comment & multi line comment pada python. 
 
-"Walaupun tidak mempengaruhi hasil program, comments adalah salah satu komponen yang penting dalam pengembangan program. Hal tersebut dikarenakan comments dapat kita selipkan di antara sekumpulan statements untuk dapat berkomunikasi dengan rekan data lainnya dalam satu tim.” Senja kembali menjelaskan.
+> "Walaupun tidak mempengaruhi hasil program, comments adalah salah satu komponen yang penting dalam pengembangan program. Hal tersebut dikarenakan comments dapat kita selipkan di antara sekumpulan statements untuk dapat berkomunikasi dengan rekan data lainnya dalam satu tim.”
 
 ```python
 # perintah pada baris ini tidak mempengaruhi program
@@ -85,6 +87,8 @@ print("jadi # digunakan untuk membuat comment pada Python")
 ```
 jadi # digunakan untuk membuat comment pada Python
 ```
+
+# Lanjutan
 
 ## Tipe Data Python
 

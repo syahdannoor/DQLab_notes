@@ -34,6 +34,17 @@ struktur table *ms_produk* terdiri atas 4 column:
 table tersebut berisi 10 baris data (row) dengan isi yang bervariasi, contoh isi untuk column `nama_produk` pada baris kelima adalah `Gift Voucher DQLab 250rb`.
 
 # SQl dan perintah SELECT
+
+https://id.wikipedia.org/wiki/SQL
+
+Apa itu SQL?
+SQL merupakan singkatan dari Structured Query Language,  adalah sebuah bahasa komputer yang sederhana dan menjadi standar untuk berkomunikasi dengan sistem database relasional.
+
+Dikatakan bahasa yang sederhana karena cukup mudah dipelajari oleh seorang yang awam, karena cukup mengerti dengan baik pengolahan data dengan aplikasi Microsoft Excel.
+SQL dirancang agar terdapat bahasa komunikasi yang standar dan seragam untuk berbagai produk sistem database - dari vendor-vendor yang berbeda. 
+Dengan kata lain, kita cukup belajar satu bahasa - walaupun nantinya ada perbedaan sedikit (dialek) antara tiap produk.
+SQL dilafalkan dengan membaca tiap karakternya S Q L (es kiu el) atau sikuel.
+
 # Menentukan Kolom dan Jumlah Baris Yang Ditampilkan
 # Prefix dan Alias
 # Menggunakan Filter

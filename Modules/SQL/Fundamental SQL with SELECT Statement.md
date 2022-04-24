@@ -45,6 +45,14 @@ SQL dirancang agar terdapat bahasa komunikasi yang standar dan seragam untuk ber
 Dengan kata lain, kita cukup belajar satu bahasa - walaupun nantinya ada perbedaan sedikit (dialek) antara tiap produk.
 SQL dilafalkan dengan membaca tiap karakternya S Q L (es kiu el) atau sikuel.
 
+Perintah SELECT
+
+SELECT adalah bagian perintah SQL yang digunakan untuk mengambil data dari RDBMS. Konstruksi perintahnya bisa sangat kompleks tapi juga sangat bermanfaat.  Perintah ini juga disebut sebagai query SQL.
+
+Query dasar dan sederhana SELECT mengikuti syntax berikut.
+
+
+
 # Menentukan Kolom dan Jumlah Baris Yang Ditampilkan
 # Prefix dan Alias
 # Menggunakan Filter

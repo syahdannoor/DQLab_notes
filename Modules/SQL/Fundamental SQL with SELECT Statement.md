@@ -51,7 +51,14 @@ SELECT adalah bagian perintah SQL yang digunakan untuk mengambil data dari RDBMS
 
 Query dasar dan sederhana SELECT mengikuti syntax berikut.
 
+![image](https://user-images.githubusercontent.com/20697667/164996818-b5baaee3-f4ff-4171-aa09-3b9f158a05c8.png)
 
+
+
+* Kata awal, yaitu SELECT digunakan untuk menginformasikan kepada sistem kita ingin mengambil data. 
+* Tanda * (bintang) artinya seluruh kolom perlu diambil dari table yang dirujuk. Tanda ini sering juga disebut sebagai wildcard.
+* FROM [NAMA_TABLE], artinya table yang akan diambil datanya.
+Tanda ; (titik koma) adalah tanda yang menyatakan akhir dari perintah SELECT atau SQL lain.
 
 # Menentukan Kolom dan Jumlah Baris Yang Ditampilkan
 # Prefix dan Alias

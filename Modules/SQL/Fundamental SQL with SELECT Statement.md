@@ -157,6 +157,161 @@ SELECT nama_produk FROM ms_produk LIMIT 3;
 
 # Prefix dan Alias
 
+Contoh untuk pengambilan nama kolom nama_produk data dari table ms_produk dengan penulisan prefix nama table adalah sebagai berikut.
 
+```sql
+SELECT ms_produk.kode_produk FROM ms_produk;
+```
+
+```
++-------------+
+| kode_produk |
++-------------+
+| prod-01     |
+| prod-02     |
+| prod-03     |
+| prod-04     |
+| prod-05     |
+| prod-06     |
+| prod-07     |
+| prod-08     |
+| prod-09     |
+| prod-10     |
++-------------+ 
+```
+
+contoh untuk merubah nama kolom dari kode_produk menjadi product_code dari table ms_produk.
+
+```sql
+SELECT 
+no_urut AS nomor,
+nama_produk AS nama
+FROM
+ms_produk;
+```
+
+```
++-------+------------------------------------+
+| nomor | nama                               |
++-------+------------------------------------+
+|     1 | Kotak Pensil DQLab                 |
+|     2 | Flashdisk DQLab 64 GB              |
+|     3 | Gift Voucher DQLab 100rb           |
+|     4 | Flashdisk DQLab 32 GB              |
+|     5 | Gift Voucher DQLab 250rb           |
+|     6 | Pulpen Multifunction + Laser DQLab |
+|     7 | Tas Travel Organizer DQLab         |
+|     8 | Gantungan Kunci DQLab              |
+|     9 | Buku Planner Agenda DQLab          |
+|    10 | Sticky Notes DQLab 500 sheets      |
++-------+------------------------------------+ 
+```
+
+dimana untuk merubah nama kolom dari kode_produk menjadi product_code dari table ms_produk - namun tanpa mengunakan AS.
+
+```sql
+SELECT 
+no_urut nomor,
+nama_produk nama
+FROM 
+ms_produk;
+```
+
+```
++-------+------------------------------------+
+| nomor | nama                               |
++-------+------------------------------------+
+|     1 | Kotak Pensil DQLab                 |
+|     2 | Flashdisk DQLab 64 GB              |
+|     3 | Gift Voucher DQLab 100rb           |
+|     4 | Flashdisk DQLab 32 GB              |
+|     5 | Gift Voucher DQLab 250rb           |
+|     6 | Pulpen Multifunction + Laser DQLab |
+|     7 | Tas Travel Organizer DQLab         |
+|     8 | Gantungan Kunci DQLab              |
+|     9 | Buku Planner Agenda DQLab          |
+|    10 | Sticky Notes DQLab 500 sheets      |
++-------+------------------------------------+ 
+```
+
+contoh penggunaan prefix nama table dan alias untuk kolom nama_produk.
+
+```sql
+SELECT
+ms_produk.harga AS harga_jual
+FROM
+ms_produk;
+```
+
+```
++------------+
+| harga_jual |
++------------+
+|      62500 |
+|      55000 |
+|     100000 |
+|      40000 |
+|     250000 |
+|      92500 |
+|      48000 |
+|      15800 |
+|      92000 |
+|      55000 |
++------------+
+```
+
+contoh untuk menggunakan alias pada table ms_produk menjadi t2.
+
+```sql
+SELECT * FROM ms_produk t2;
+```
+
+```
++---------+-------------+------------------------------------+--------+
+| no_urut | kode_produk | nama_produk                        | harga  |
++---------+-------------+------------------------------------+--------+
+|       1 | prod-01     | Kotak Pensil DQLab                 |  62500 |
+|       2 | prod-02     | Flashdisk DQLab 64 GB              |  55000 |
+|       3 | prod-03     | Gift Voucher DQLab 100rb           | 100000 |
+|       4 | prod-04     | Flashdisk DQLab 32 GB              |  40000 |
+|       5 | prod-05     | Gift Voucher DQLab 250rb           | 250000 |
+|       6 | prod-06     | Pulpen Multifunction + Laser DQLab |  92500 |
+|       7 | prod-07     | Tas Travel Organizer DQLab         |  48000 |
+|       8 | prod-08     | Gantungan Kunci DQLab              |  15800 |
+|       9 | prod-09     | Buku Planner Agenda DQLab          |  92000 |
+|      10 | prod-10     | Sticky Notes DQLab 500 sheets      |  55000 |
++---------+-------------+------------------------------------+--------+
+```
+
+> Terlihat hasil yang dikeluarkan adalah seluruh isi table ms_produk.
+
+contoh berikut ini dari tabel ms_produk yang telah digunakan sebelumnya.
+
+```sql
+SELECT
+t2.nama_produk,
+t2.harga
+FROM
+ms_produk t2;
+```
+
+```
++------------------------------------+--------+
+| nama_produk                        | harga  |
++------------------------------------+--------+
+| Kotak Pensil DQLab                 |  62500 |
+| Flashdisk DQLab 64 GB              |  55000 |
+| Gift Voucher DQLab 100rb           | 100000 |
+| Flashdisk DQLab 32 GB              |  40000 |
+| Gift Voucher DQLab 250rb           | 250000 |
+| Pulpen Multifunction + Laser DQLab |  92500 |
+| Tas Travel Organizer DQLab         |  48000 |
+| Gantungan Kunci DQLab              |  15800 |
+| Buku Planner Agenda DQLab          |  92000 |
+| Sticky Notes DQLab 500 sheets      |  55000 |
++------------------------------------+--------+
+```
 
 # Menggunakan Filter
+
+

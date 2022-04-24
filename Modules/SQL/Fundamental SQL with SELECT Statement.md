@@ -54,12 +54,52 @@ Query dasar dan sederhana SELECT mengikuti syntax berikut.
 ![image](https://user-images.githubusercontent.com/20697667/164996818-b5baaee3-f4ff-4171-aa09-3b9f158a05c8.png)
 
 
+> Jangan gunakan perintah `SELECT *` , bila data nya besar
 
 * Kata awal, yaitu SELECT digunakan untuk menginformasikan kepada sistem kita ingin mengambil data. 
 * Tanda * (bintang) artinya seluruh kolom perlu diambil dari table yang dirujuk. Tanda ini sering juga disebut sebagai wildcard.
 * FROM [NAMA_TABLE], artinya table yang akan diambil datanya.
-Tanda ; (titik koma) adalah tanda yang menyatakan akhir dari perintah SELECT atau SQL lain.
+* Tanda ; (titik koma) adalah tanda yang menyatakan akhir dari perintah SELECT atau SQL lain.
+
+```sql
+SELECT * FROM ms_produk;
+```
+
+```
++---------+-------------+------------------------------------+--------+
+| no_urut | kode_produk | nama_produk                        | harga  |
++---------+-------------+------------------------------------+--------+
+|       1 | prod-01     | Kotak Pensil DQLab                 |  62500 |
+|       2 | prod-02     | Flashdisk DQLab 64 GB              |  55000 |
+|       3 | prod-03     | Gift Voucher DQLab 100rb           | 100000 |
+|       4 | prod-04     | Flashdisk DQLab 32 GB              |  40000 |
+|       5 | prod-05     | Gift Voucher DQLab 250rb           | 250000 |
+|       6 | prod-06     | Pulpen Multifunction + Laser DQLab |  92500 |
+|       7 | prod-07     | Tas Travel Organizer DQLab         |  48000 |
+|       8 | prod-08     | Gantungan Kunci DQLab              |  15800 |
+|       9 | prod-09     | Buku Planner Agenda DQLab          |  92000 |
+|      10 | prod-10     | Sticky Notes DQLab 500 sheets      |  55000 |
++---------+-------------+------------------------------------+--------+
+```
+
+Jenis-jenis Perintah pada SQL
+
+Perintah SELECT pada bagian sebelumnya hanya salah satu jenis perintah yang ada pada SQL, untuk jelasnya mari kita ikuti penjelasan berikut.
+
+Perintah SQL selengkapnya terdiri dari dua kategori:
+
+* DDL (Data Definition Language), yaitu berbagai perintah yang digunakan untuk membuat, merubah, dan menghapus struktur database. Struktur database ini terdiri dari database, table, kolom dan tipe data. 
+* DML (Data Manipulation Language), yaitu berbagai perintah yang digunakan untuk 
+    * Memasukkan data dengan perintah INSERT
+    * Mengambil data atau query dengan perintah SELECT
+    * Merubah data dengan perintah UPDATE
+    * Menghapus data dengan perintah DELETE
+
+Dari contoh pada praktek sebelumnya, maka dapat disimpulkan perintah yang kita gunakan adalah melakukan query dengan SELECT.
 
 # Menentukan Kolom dan Jumlah Baris Yang Ditampilkan
+
+
+
 # Prefix dan Alias
 # Menggunakan Filter

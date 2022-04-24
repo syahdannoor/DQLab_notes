@@ -35,7 +35,7 @@ table tersebut berisi 10 baris data (row) dengan isi yang bervariasi, contoh isi
 
 # SQl dan perintah SELECT
 
-https://id.wikipedia.org/wiki/SQL
+[Ini Pengertian dari Wikipedia](https://id.wikipedia.org/wiki/SQL)
 
 Apa itu SQL?
 SQL merupakan singkatan dari Structured Query Language,  adalah sebuah bahasa komputer yang sederhana dan menjadi standar untuk berkomunikasi dengan sistem database relasional.
@@ -314,4 +314,19 @@ ms_produk t2;
 
 # Menggunakan Filter
 
+Filter merupakan salah satu fitur penting terutama ketika data yang perlu diambil untuk diolah harus memenuhi kriteria tertentu. Contohnya, bagaimana cara kita mengambil data dengan constraint berupa nama produk adalah pensil? Filter adalah jawabnya, karena tanpa fitur ini data yang akan diolah nantinya tidak memiliki manfaat yang berarti.
+
+```sql
+SELECT *
+FROM ms_produk
+WHERE nama_produk = 'Tas Travel Organizer DQLab';
+```
+
+```
++---------+-------------+----------------------------+-------+
+| no_urut | kode_produk | nama_produk                | harga |
++---------+-------------+----------------------------+-------+
+|       7 | prod-07     | Tas Travel Organizer DQLab | 48000 |
++---------+-------------+----------------------------+-------+
+```
 

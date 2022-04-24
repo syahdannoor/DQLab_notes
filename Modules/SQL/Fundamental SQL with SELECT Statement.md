@@ -99,7 +99,64 @@ Dari contoh pada praktek sebelumnya, maka dapat disimpulkan perintah yang kita g
 
 # Menentukan Kolom dan Jumlah Baris Yang Ditampilkan
 
+contoh query untuk mengambil satu kolom saja yaitu nama_produk.
 
+```sql
+SELECT nama_produk FROM ms_produk;
+```
+
+```
++------------------------------------+
+| nama_produk                        |
++------------------------------------+
+| Kotak Pensil DQLab                 |
+| Flashdisk DQLab 64 GB              |
+| Gift Voucher DQLab 100rb           |
+| Flashdisk DQLab 32 GB              |
+| Gift Voucher DQLab 250rb           |
+| Pulpen Multifunction + Laser DQLab |
+| Tas Travel Organizer DQLab         |
+| Gantungan Kunci DQLab              |
+| Buku Planner Agenda DQLab          |
+| Sticky Notes DQLab 500 sheets      |
++------------------------------------+ 
+```
+
+berikut adalah perintah SELECT adalah untuk menampilkan dua kolom pada table ms_produk, yaitu kode_produk dan nama_produk.
+
+```sql
+SELECT nama_produk, harga FROM ms_produk;
+```
+
+```
++------------------------------------+--------+
+| nama_produk                        | harga  |
++------------------------------------+--------+
+| Kotak Pensil DQLab                 |  62500 |
+| Flashdisk DQLab 64 GB              |  55000 |
+| Gift Voucher DQLab 100rb           | 100000 |
+| Flashdisk DQLab 32 GB              |  40000 |
+| Gift Voucher DQLab 250rb           | 250000 |
+| Pulpen Multifunction + Laser DQLab |  92500 |
+| Tas Travel Organizer DQLab         |  48000 |
+| Gantungan Kunci DQLab              |  15800 |
+| Buku Planner Agenda DQLab          |  92000 |
+| Sticky Notes DQLab 500 sheets      |  55000 |
++------------------------------------+--------+ 
+```
+
+Ini adalah perintah untuk membatasi pengambilan data dari table ms_produk sebanyak tiga baris data (row).
+
+```sql
+SELECT nama_produk FROM ms_produk LIMIT 3;
+```
+
+```
+SELECT nama_produk FROM ms_produk LIMIT 3;
+```
 
 # Prefix dan Alias
+
+
+
 # Menggunakan Filter

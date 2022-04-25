@@ -136,6 +136,8 @@ Dan dalam tabel tersebut terdapat 10 baris data (row) dengan isi data yang berva
 
 ## Kesimpulan 
 
+apa yang aku pelajari:
+
 1. Sistem relasional database atau relational database management system (RDBMS) adalah salah satu dari beberapa sistem database paling populer di dunia saat ini dan menggunakan bahasa SQL untuk pengolahannya.
 2. Beberapa produk RDBMS yang terkenal antara lain adalah Microsoft SQL Server, Oracle, MySQL, PostgreSQL, IBM DB2, dan masih banyak lainnya.
 3. Struktur penyimpanan data di RDBMS menggunakan hirarki:

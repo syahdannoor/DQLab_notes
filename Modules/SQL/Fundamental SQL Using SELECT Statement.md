@@ -146,7 +146,7 @@ apa yang aku pelajari:
     * Kolom (Column)
 4. Data akan diisi ke dalam table dalam bentuk Baris (Row) data.
 
-## Penggunaan Perintah SELECT… FROM…
+# Penggunaan Perintah SELECT… FROM…
 
 
 

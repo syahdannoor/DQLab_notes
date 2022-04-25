@@ -150,7 +150,7 @@ apa yang aku pelajari:
 
 ## Mengambil Seluruh Kolom dalam suatu Tabel
 
-![image]()
+![image](https://github.com/syahdannoor/DQLab_notes/blob/main/Modules/SQL/images/image_2022-04-25_234936048.png)
 
 * Kata awal, yaitu SELECT digunakan untuk menginformasikan kepada sistem bahwa kita ingin mengambil data. 
 * Tanda * (bintang) artinya seluruh kolom perlu diambil dari tabel yang dirujuk. Tanda ini sering juga disebut sebagai wildcard.

@@ -329,4 +329,3 @@ WHERE nama_produk = 'Tas Travel Organizer DQLab';
 |       7 | prod-07     | Tas Travel Organizer DQLab | 48000 |
 +---------+-------------+----------------------------+-------+
 ```
-

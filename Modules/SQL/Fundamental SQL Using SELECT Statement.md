@@ -175,10 +175,110 @@ SELECT * FROM ms_produk;
 +---------+-------------+------------------------------------+--------+
 ```
 
+## Mengambil Satu Kolom dari Tabel
 
+![image](https://user-images.githubusercontent.com/20697667/165215572-f68a2efb-7fac-456d-a379-d6c2b03a96dd.png)
+
+```sql
+SELECT nama_produk FROM ms_produk;
+```
+
+```
++------------------------------------+
+| nama_produk                        |
++------------------------------------+
+| Kotak Pensil DQLab                 |
+| Flashdisk DQLab 64 GB              |
+| Gift Voucher DQLab 100rb           |
+| Flashdisk DQLab 32 GB              |
+| Gift Voucher DQLab 250rb           |
+| Pulpen Multifunction + Laser DQLab |
+| Tas Travel Organizer DQLab         |
+| Gantungan Kunci DQLab              |
+| Buku Planner Agenda DQLab          |
+| Sticky Notes DQLab 500 sheets      |
++------------------------------------+
+```
+
+## Mengambil Lebih dari Satu Kolom dari Tabel
+
+![image](https://user-images.githubusercontent.com/20697667/165216347-6e7bfa00-04a1-4732-942e-3d7966d4a197.png)
+
+```sql
+SELECT nama_produk, harga FROM ms_produk;
+```
+
+```
++------------------------------------+--------+
+| nama_produk                        | harga  |
++------------------------------------+--------+
+| Kotak Pensil DQLab                 |  62500 |
+| Flashdisk DQLab 64 GB              |  55000 |
+| Gift Voucher DQLab 100rb           | 100000 |
+| Flashdisk DQLab 32 GB              |  40000 |
+| Gift Voucher DQLab 250rb           | 250000 |
+| Pulpen Multifunction + Laser DQLab |  92500 |
+| Tas Travel Organizer DQLab         |  48000 |
+| Gantungan Kunci DQLab              |  15800 |
+| Buku Planner Agenda DQLab          |  92000 |
+| Sticky Notes DQLab 500 sheets      |  55000 |
++------------------------------------+--------+
+```
+
+## Membatasi Pengambilan Jumlah Row Data
+
+![download](https://user-images.githubusercontent.com/20697667/165216592-60c2f956-27a8-49aa-aea9-6f336830591c.png)
+
+```sql
+SELECT nama_produk, harga FROM ms_produk LIMIT 5;
+```
+
+```
++--------------------------+--------+
+| nama_produk              | harga  |
++--------------------------+--------+
+| Kotak Pensil DQLab       |  62500 |
+| Flashdisk DQLab 64 GB    |  55000 |
+| Gift Voucher DQLab 100rb | 100000 |
+| Flashdisk DQLab 32 GB    |  40000 |
+| Gift Voucher DQLab 250rb | 250000 |
++--------------------------+--------+
+```
+
+## Penggunaan SELECT DISTINCT statement
+
+Untuk menghilangkan data duplikasi, gunakan SELECT DISTINCT statement. Dengan SELECT DISTINCT, data yang sama atau duplikat akan dieliminasi dan akan ditampilkan data yang unik saja.
+
+![image](https://user-images.githubusercontent.com/20697667/165216923-62d54d22-10b9-467b-bffb-c35ad3619bcf.png)
+
+```sql
+SELECT DISTINCT nama_customer, alamat FROM ms_pelanggan;
+```
+
+```
++---------------------+------------------------------------------+
+| nama_customer       | alamat                                   |
++---------------------+------------------------------------------+
+| Eva Novianti, S.H.  | Vila Sempilan, No. 67 - Kota B           |
+| Heidi Goh           | Vila Sempilan, No. 11 - Kota B           |
+| Unang Handoko       | Vila Sempilan, No. 1 - Kota B            |
+| Jokolono Sukarman   | Vila Permata Intan Berkilau, Blok C5-7   |
+| Tommy Sinaga        | Vila Permata Intan Berkilau, Blok A1/2   |
+| Irwan Setianto      | Vila Gunung Seribu, Blok O1 - No. 1      |
+| Agus Cahyono        | Vila Gunung Seribu, Blok F4 - No. 8      |
+| Maria Sirait        | Vila Bukit Sagitarius, Gang. Sawit No. 3 |
+| Ir. Ita Nugraha     | Vila Bukit Sagitarius, Gang Kelapa No. 6 |
+| Djoko Wardoyo, Drs. | Vila Bukit Sagitarius, Blok A1 No. 1     |
++---------------------+------------------------------------------+
+```
 
 # Prefix dan Alias
 
+
+
 # Menggunakan Filter
 
+
+
 # Mini Project
+

@@ -274,7 +274,80 @@ SELECT DISTINCT nama_customer, alamat FROM ms_pelanggan;
 
 # Prefix dan Alias
 
+## Menggunakan Prefix pada Nama Kolom
 
+![image](https://user-images.githubusercontent.com/20697667/165738158-050b052a-e8fb-4e5c-9842-90754d9678e9.png)
+
+```sql
+SELECT ms_produk.kode_produk FROM ms_produk;
+```
+
+```
++-------------+
+| kode_produk |
++-------------+
+| prod-01     |
+| prod-02     |
+| prod-03     |
+| prod-04     |
+| prod-05     |
+| prod-06     |
+| prod-07     |
+| prod-08     |
+| prod-09     |
+| prod-10     |
++-------------+
+```
+
+## Menggunakan Alias pada Kolom
+
+![image](https://user-images.githubusercontent.com/20697667/165738816-234c6e20-fa7c-448f-97a0-276f8714cf83.png)
+
+```sql
+SELECT no_urut AS nomor, nama_produk AS nama FROM ms_produk;
+```
+
+```
++-------+------------------------------------+
+| nomor | nama                               |
++-------+------------------------------------+
+|     1 | Kotak Pensil DQLab                 |
+|     2 | Flashdisk DQLab 64 GB              |
+|     3 | Gift Voucher DQLab 100rb           |
+|     4 | Flashdisk DQLab 32 GB              |
+|     5 | Gift Voucher DQLab 250rb           |
+|     6 | Pulpen Multifunction + Laser DQLab |
+|     7 | Tas Travel Organizer DQLab         |
+|     8 | Gantungan Kunci DQLab              |
+|     9 | Buku Planner Agenda DQLab          |
+|    10 | Sticky Notes DQLab 500 sheets      |
++-------+------------------------------------+
+```
+
+## Menghilangkan Keyword 'AS'
+
+![image](https://user-images.githubusercontent.com/20697667/165739692-9603483c-9fe2-41ac-a1f2-4c2e35b9e6c0.png)
+
+```sql
+SELECT no_urut nomor, nama_produk nama FROM ms_produk;
+```
+
+```
++-------+------------------------------------+
+| nomor | nama                               |
++-------+------------------------------------+
+|     1 | Kotak Pensil DQLab                 |
+|     2 | Flashdisk DQLab 64 GB              |
+|     3 | Gift Voucher DQLab 100rb           |
+|     4 | Flashdisk DQLab 32 GB              |
+|     5 | Gift Voucher DQLab 250rb           |
+|     6 | Pulpen Multifunction + Laser DQLab |
+|     7 | Tas Travel Organizer DQLab         |
+|     8 | Gantungan Kunci DQLab              |
+|     9 | Buku Planner Agenda DQLab          |
+|    10 | Sticky Notes DQLab 500 sheets      |
++-------+------------------------------------+ 
+```
 
 # Menggunakan Filter
 

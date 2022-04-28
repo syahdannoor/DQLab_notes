@@ -349,6 +349,83 @@ SELECT no_urut nomor, nama_produk nama FROM ms_produk;
 +-------+------------------------------------+ 
 ```
 
+## Menggabungkan Prefix dan Alias
+
+![image](https://user-images.githubusercontent.com/20697667/165740108-7551b2ed-3f0d-45d0-852e-d18372ef88c8.png)
+
+```sql
+SELECT ms_produk.harga AS harga_jual FROM ms_produk;
+```
+
+```
++------------+
+| harga_jual |
++------------+
+|      62500 |
+|      55000 |
+|     100000 |
+|      40000 |
+|     250000 |
+|      92500 |
+|      48000 |
+|      15800 |
+|      92000 |
+|      55000 |
++------------+
+```
+
+## Menggunakan Alias pada Tabel
+
+![image](https://user-images.githubusercontent.com/20697667/165740288-47652576-6ae0-4786-b6ed-e3adaec49f0b.png)
+
+```sql
+SELECT * FROM ms_produk t2;
+```
+
+```
++---------+-------------+------------------------------------+--------+
+| no_urut | kode_produk | nama_produk                        | harga  |
++---------+-------------+------------------------------------+--------+
+|       1 | prod-01     | Kotak Pensil DQLab                 |  62500 |
+|       2 | prod-02     | Flashdisk DQLab 64 GB              |  55000 |
+|       3 | prod-03     | Gift Voucher DQLab 100rb           | 100000 |
+|       4 | prod-04     | Flashdisk DQLab 32 GB              |  40000 |
+|       5 | prod-05     | Gift Voucher DQLab 250rb           | 250000 |
+|       6 | prod-06     | Pulpen Multifunction + Laser DQLab |  92500 |
+|       7 | prod-07     | Tas Travel Organizer DQLab         |  48000 |
+|       8 | prod-08     | Gantungan Kunci DQLab              |  15800 |
+|       9 | prod-09     | Buku Planner Agenda DQLab          |  92000 |
+|      10 | prod-10     | Sticky Notes DQLab 500 sheets      |  55000 |
++---------+-------------+------------------------------------+--------+
+```
+
+## Prefix dengan Alias Tabel
+
+![image](https://user-images.githubusercontent.com/20697667/165740463-298d3153-8a1b-49ff-84f6-f2a951ddd5e7.png)
+
+```sql
+SELECT t2.nama_produk, t2.harga FROM ms_produk t2;
+```
+
+```
++------------------------------------+--------+
+| nama_produk                        | harga  |
++------------------------------------+--------+
+| Kotak Pensil DQLab                 |  62500 |
+| Flashdisk DQLab 64 GB              |  55000 |
+| Gift Voucher DQLab 100rb           | 100000 |
+| Flashdisk DQLab 32 GB              |  40000 |
+| Gift Voucher DQLab 250rb           | 250000 |
+| Pulpen Multifunction + Laser DQLab |  92500 |
+| Tas Travel Organizer DQLab         |  48000 |
+| Gantungan Kunci DQLab              |  15800 |
+| Buku Planner Agenda DQLab          |  92000 |
+| Sticky Notes DQLab 500 sheets      |  55000 |
++------------------------------------+--------+ 
+```
+
+
+
 # Menggunakan Filter
 
 

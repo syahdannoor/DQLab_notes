@@ -424,9 +424,99 @@ SELECT t2.nama_produk, t2.harga FROM ms_produk t2;
 +------------------------------------+--------+ 
 ```
 
-
+Perintah SELECT dapat ditulis dengan variasi identitas kolom dan tabel berupa prefix dan alias.
+- Penulisan lengkap untuk nama kolom adalah prefix berupa nama tabel disertai tanda titik sebelum nama kolom itu sendiri.
+- Alias adalah nama lain yang diberikan untuk kolom maupun tabel.
+- Alias dapat digunakan dengan keyword AS atau tanpa keyword AS setelah nama kolom dan tabel.
+- Prefix nama tabel bisa menggunakan alias.
 
 # Menggunakan Filter
+
+Untuk case dimana kita ingin mengambil data berdasarkan kondisi tertentu saja, kita bisa menggunakan filter. SQL memiliki fungsi filter dengan menggunakan klausul WHERE. Jika kondisi WHERE terpenuhi, maka hasil query hanya akan menampilkan data yang sudah terfilter.
+
+Klausul WHERE untuk:
+
+- Filter data dengan kondisi teks tertentu.
+- Filter data dengan nilai angka tertentu.
+- Filter data dengan dua kondisi menggunakan operator AND dan OR.
+
+## Menggunakan WHERE
+
+Klausul WHERE dari SELECT digunakan untuk memfilter data berdasarkan kondisi tertentu. Untuk syntax lengkapnya adalah sebagai berikut.
+
+![download](https://user-images.githubusercontent.com/20697667/168477449-53d72e2b-a837-4239-9ddf-19a6d99ec8f0.png)
+
+```sql
+SELECT * FROM ms_produk WHERE nama_produk = 'Tas Travel Organizer DQLab';
+```
+
+```
++---------+-------------+----------------------------+-------+
+| no_urut | kode_produk | nama_produk                | harga |
++---------+-------------+----------------------------+-------+
+|       7 | prod-07     | Tas Travel Organizer DQLab | 48000 |
++---------+-------------+----------------------------+-------+
+```
+
+## Menggunakan Operand OR
+
+![image](https://user-images.githubusercontent.com/20697667/168477609-90134501-da03-4f48-8aae-73001419ded4.png)
+
+```sql
+SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab' OR nama_produk = 'Tas Travel Organizer DQLab' OR nama_produk = 'Flashdisk DQLab 64 GB';
+```
+
+```
++---------+-------------+----------------------------+-------+
+| no_urut | kode_produk | nama_produk                | harga |
++---------+-------------+----------------------------+-------+
+|       2 | prod-02     | Flashdisk DQLab 64 GB      | 55000 |
+|       7 | prod-07     | Tas Travel Organizer DQLab | 48000 |
+|       8 | prod-08     | Gantungan Kunci DQLab      | 15800 |
++---------+-------------+----------------------------+-------+ 
+```
+
+## Filter untuk Angka
+
+Berikut adalah contoh filter dimana kolom harga harus memiliki nilai di bawah 50000.
+
+![download](https://user-images.githubusercontent.com/20697667/168477879-c2ce24b6-3416-481f-87e3-33c87cf1c4f6.png)
+
+![image](https://user-images.githubusercontent.com/20697667/168477903-a056d9c4-c562-453e-b2f4-1e3866554513.png)
+
+```sql
+SELECT * FROM ms_produk WHERE harga > 50000;
+```
+
+```
++---------+-------------+------------------------------------+--------+
+| no_urut | kode_produk | nama_produk                        | harga  |
++---------+-------------+------------------------------------+--------+
+|       1 | prod-01     | Kotak Pensil DQLab                 |  62500 |
+|       2 | prod-02     | Flashdisk DQLab 64 GB              |  55000 |
+|       3 | prod-03     | Gift Voucher DQLab 100rb           | 100000 |
+|       5 | prod-05     | Gift Voucher DQLab 250rb           | 250000 |
+|       6 | prod-06     | Pulpen Multifunction + Laser DQLab |  92500 |
+|       9 | prod-09     | Buku Planner Agenda DQLab          |  92000 |
+|      10 | prod-10     | Sticky Notes DQLab 500 sheets      |  55000 |
++---------+-------------+------------------------------------+--------+
+```
+
+## Menggunakan Operand AND
+
+![image](https://user-images.githubusercontent.com/20697667/168478041-d6167cab-43be-4037-8ec3-d06f37f04c12.png)
+
+```sql
+SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab' AND harga < 50000;
+```
+
+```
++---------+-------------+-----------------------+-------+
+| no_urut | kode_produk | nama_produk           | harga |
++---------+-------------+-----------------------+-------+
+|       8 | prod-08     | Gantungan Kunci DQLab | 15800 |
++---------+-------------+-----------------------+-------+
+```
 
 
 

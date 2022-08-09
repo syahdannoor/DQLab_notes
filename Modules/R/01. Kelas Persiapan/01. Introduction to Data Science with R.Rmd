@@ -1,14 +1,14 @@
 # Dasar-dasar Pemograman R
 
-```{r}
+```{r ""Hello World""}
 "Hello World"
 ```
 
-```{r}
+```{r "Sum"}
 10 + 7
 ```
 
-```{r}
+```{r "add variable"}
 a <- 5
 print(a)
 ```
@@ -16,22 +16,22 @@ print(a)
 # Lanjutan dasar-dasar R
 
 ## Comment pada R
-```{r}
+```{r "Comment #"}
 #Ini adalah baris komentar.
 10 + 7 #Ini adalah baris komentar
 ```
 
 ## Vector pada R
-```{r}
+```{r "Vector"}
 c(3, 10, 15)
 ```
 
-```{r}
+```{r "Vector"}
 c(1:5)
 ```
 
 ## Menggunakan Fungsi Summary
-```{r}
+```{r "Summary"}
 summary(c(1:5))
 ```
 

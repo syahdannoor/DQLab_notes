@@ -17,22 +17,63 @@
     Biasanya berupa data dashboard.
 
 # Missing Value in R
-```{r }
 
-```
-```{r }
++ Bagaimana missing value direpresentasikan, ini penting sehingga kita bisa identifikasi apakah nilai hilang karena dari awal memang ga ada, apakah karena operasi matematika, dan lain-lain.
++ Dengan mengetahui representasi ini, kita dapat melakukan sesuatu terhadapnya. Atau singkat dapat dikelola (manage) dengan baik.
 
-```
-```{r }
+> NA adalah representasi utama dari missing value di R, dan merupakan suatu nilai atomik.
+    Artinya posisi NA sama dengan contoh nilai-nilai atomik bilangan seperti 1, 2 atau 100. Juga sama dengan contoh nilai karakter seperti "a", "b",  atau "g".
+    NA tidak bisa digunakan sebagai variable karena merupakan keyword, dan perhatikan penulisan NA dimana kedua karakter adalah huruf besar.
 
-```
-```{r }
+```{r NA dan default type}
+#Ketik nilai NA
+NA
 
+#Tampilkan type dari NA dengan function typeof
+typeof(NA)
 ```
-```{r }
 
+```{r Menggunakan function is.na}
+#Buat variable x yang diisi dengan nilai NA
+x <- NA
+
+#Pengecekan variable x dengan nilai NA menggunakan operator ==
+x == NA # nolint
+
+#Pengecekan variable x dengan nilai NA menggunakan function is.na
+is.na(x)
 ```
+
+```{r Variasi NA dan is.na}
+typeof(NA_integer_)
+typeof(NA_real_)
+typeof(NA_complex_)
+typeof(NA_character_)
+is.na(NA_integer_)
+is.na(NA_real_)
+is.na(NA_complex_)
+is.na(NA_character_)
+```
+
+```{r Coercion pada Vector yang mengandung NA}
+#Membuat vector bernama isi.vector dengan isi bilangan, dimana salah satunya memiliki missing value # nolint
+isi.vector <- c(1, 2, 3, NA, 3, 1) # nolint
+
+#Mengecek keseluruhan tipe data dengan perulangan lapply dan typeof
+lapply(isi.vector, typeof)
+
+#Menggunakan is.na untuk mengecek keberadaan missing value dari tiap elemen pada vector  # nolint
+is.na(isi.vector)
+```
+
+NULL adalah suatu object khusus di R yang digunakan untuk merepresentasikan nilai atau object yang tidak terdefinisikan.
+
 ```{r }
+lapply(isi.vector, typeof)
+```
+
+```{r }
+is.na(isi.vector)
 
 ```
 ```{r }

@@ -1,0 +1,195 @@
+# Apa itu Data Preparation atau Data Wrangling?
+
+> "Data preparation accounts for about 80% of the work of data scientists"
+
+![pie chart yang merepresentasikan porsi dari pekerjaan data scientist. Proses data preparation di chart ini adalah Collecting data sets (19%) dan Cleaning and organizing data (60%).](https://storage.googleapis.com/dqlab-image/images/data-scientist-survey.jpg)
+
+> Data wrangling adalah proses membaca data dari berbagai sumber dan merubah isi dan struktur sehingga dapat digunakan untuk analisa.
+
+## Tiga Tahapan Penting dalam Pengolahan Data
+
+1. Capture
+    Mengumpulkan data mentah
+2. Clean
+    Membersihkan & merapikan data
+3. Consume
+    Mengkonsumsi hasil visualisasi data yang telah dibersihkan.
+    Biasanya berupa data dashboard.
+
+# Missing Value in R
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+
+# Factor
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+
+# Reading from Text and Excel File
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+
+# Structure Transformation
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+```{r }
+
+```
+
+# Penutup Data Wrangling Part 1
+```{r }
+
+```

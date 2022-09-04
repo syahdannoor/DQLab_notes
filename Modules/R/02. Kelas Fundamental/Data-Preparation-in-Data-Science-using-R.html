@@ -11,7 +11,7 @@
 
 
 
-<title>Data-Preparation-in-Data-Science-using-R.knit</title>
+<title>Apa itu Data Preparation atau Data Wrangling?</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -354,12 +354,12 @@ display: none;
 
 
 
+<h1 class="title toc-ignore">Apa itu Data Preparation atau Data
+Wrangling?</h1>
 
 </div>
 
 
-<div id="apa-itu-data-preparation-atau-data-wrangling" class="section level1">
-<h1>Apa itu Data Preparation atau Data Wrangling?</h1>
 <blockquote>
 <p>“Data preparation accounts for about 80% of the work of data
 scientists”</p>
@@ -382,7 +382,6 @@ merubah isi dan struktur sehingga dapat digunakan untuk analisa.</p>
 <li>Consume Mengkonsumsi hasil visualisasi data yang telah dibersihkan.
 Biasanya berupa data dashboard.</li>
 </ol>
-</div>
 </div>
 <div id="missing-value-in-r" class="section level1">
 <h1>Missing Value in R</h1>
@@ -485,6 +484,60 @@ isi.vector &lt;- c(1, 2, 3, NA, 5, NULL, 7)
 #Menghitung jumlah elemen dari isi.vector
 length(isi.vector)</code></pre>
 <pre><code>## [1] 6</code></pre>
+<p>Ringkasan Perbandingan NA &amp; NULL</p>
+<table>
+<colgroup>
+<col width="40%" />
+<col width="30%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th>NA</th>
+<th>NULL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Apa itu?</td>
+<td>adalah sebuah konstanta (variable yang tidak bisa diubah lagi
+nilainya) sebagai indikator dari missing value</td>
+<td>Sebuah object untuk merepresentasikan sesuatu yang “tidak
+terdefinisi”</td>
+</tr>
+<tr class="even">
+<td align="left">Kata kunci</td>
+<td>Indikator</td>
+<td>tidak terdefinisi</td>
+</tr>
+<tr class="odd">
+<td align="left">Panjang (length) dari object</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td align="left">Tipe</td>
+<td>Logical</td>
+<td>object</td>
+</tr>
+<tr class="odd">
+<td align="left">Variasi</td>
+<td>NA dapat berubah menjadi representasi variasi missing value dengan
+daftar berikut: - NA_integer_ untuk tipe data “integer” - NA_real_ untuk
+tipe data “double” - NA_complex_ untuk tipe data “complex” -
+NA_character_ untuk tipe data “character”</td>
+<td>Tidak ada Variasi</td>
+</tr>
+<tr class="even">
+<td align="left">Contoh kasus ketika kita akan menemukan object
+ini?</td>
+<td>Ketika kita membaca data yang tidak memiliki nilai</td>
+<td>Ketika mengakses posisi index yang tidak terdapat pada suatu
+list</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="factor" class="section level1">
 <h1>Factor</h1>

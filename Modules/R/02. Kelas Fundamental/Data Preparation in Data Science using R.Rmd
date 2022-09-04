@@ -1,4 +1,6 @@
-# Apa itu Data Preparation atau Data Wrangling?
+---
+title : "Apa itu Data Preparation atau Data Wrangling?"
+---
 
 > "Data preparation accounts for about 80% of the work of data scientists"
 
@@ -68,27 +70,52 @@ is.na(isi.vector)
 
 NULL adalah suatu object khusus di R yang digunakan untuk merepresentasikan nilai atau object yang tidak terdefinisikan.
 
-```{r }
+```{r NULL}
 lapply(isi.vector, typeof)
 ```
 
-```{r }
+```{r NULL}
 is.na(isi.vector)
 
 ```
 
-NULL dan Vector
-
-```{r }
+```{r NULL dan Vector}
 #Membuat vector dengan 7 elemen termasuk NA dan NULL
 isi.vector <- c(1, 2, 3, NA, 5, NULL, 7)
 #Menghitung jumlah elemen dari isi.vector
 length(isi.vector)
 ```
-```{r }
 
+## Ringkasan Perbandingan NA & NULL
+
+|   | NA | NULL |
+|:---|---|---|
+| Apa itu? | adalah sebuah konstanta (variable yang tidak bisa diubah lagi nilainya) sebagai indikator dari missing value | Sebuah object untuk merepresentasikan sesuatu yang "tidak terdefinisi" |
+| Kata kunci | Indikator | tidak terdefinisi |
+| Panjang (length) dari object | 1 | 0 |
+| Tipe | Logical | object |
+| Variasi | NA dapat berubah menjadi representasi variasi missing value : (NA_integer_ untuk tipe data "integer", NA_real_ untuk tipe data "double", NA_complex_ untuk tipe data "complex", NA_character_ untuk tipe data "character") | Tidak ada Variasi |
+| Contoh kasus ketika kita akan menemukan object ini? | Ketika kita membaca data yang tidak memiliki nilai | Ketika mengakses posisi index yang tidak terdapat pada suatu list |
+
+note:
+1. Artinya NA adalah representasi missing value yang "masih" memiliki nilai logika – yang berfungsi sebagai indikator.
+2. NULL sendiri adalah objek tidak berbentuk, maka itu tidak terdefinisi dan panjangnya 0.
+Salah satu operasi yang akan menghasilkan NULL adalah pada saat kita mengakses nama element yang tidak terdapat di dalam suatu list.
+
+```{r NULL dan List}
+#Membuat list dengan 3 elemen termasuk NA dan NULL 
+isi.list <- list(1, NULL, 3, NA, 5)
+
+#Menghitung jumlah elemen dari isi.list
+length(isi.list)
 ```
-```{r }
+
+```{r Inf untuk mewakili Infinite Number}
+#Hitung kalkulasi 5 dibagi dengan 0
+5/0
+
+#Hitung kalkulasi -120 dibagi dengan 0
+-120/0
 
 ```
 ```{r }

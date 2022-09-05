@@ -21,6 +21,7 @@ title : "Apa itu Data Preparation atau Data Wrangling?"
 
 # Missing Value in R
 
+
 + Bagaimana missing value direpresentasikan, ini penting sehingga kita bisa identifikasi apakah nilai hilang karena dari awal memang ga ada, apakah karena operasi matematika, dan lain-lain.
 + Dengan mengetahui representasi ini, kita dapat melakukan sesuatu terhadapnya. Atau singkat dapat dikelola (manage) dengan baik.
 
@@ -128,7 +129,7 @@ is.nan(contoh_nan)
 ```{r NaN dan is.na versus NA dan is.nan}
 #Masukkan code di bawah ini sesuai permintaan soal
 is.na(NaN)
-#is.nan(Na)
+#is.nan(Na) # nolint
 ```
 ```{r Menghitung Jumlah Missing Values dari satu Vector}
 #Masukkan code di bawah ini sesuai permintaan soal
@@ -147,6 +148,7 @@ sum(is.na(isi_vector) == TRUE)
 
 ## Pendahuluan
 Factor adalah suatu tipe variabel yang intensif digunakan di R  
+
 + Apa itu factor dan kenapa diperlukan?  
 + Kapan factor digunakan  
 + Cara membuat factor di R  
@@ -158,6 +160,7 @@ Factor adalah suatu tipe variabel yang intensif digunakan di R
 > suatu variable di R yang menyimpan daftar nilai-nilai kategori atau nominal.
 
 contoh daftar nilai kategori yang bisa disimpan dalam factor:  
+
 - Nama bulan: Januari, Februari, Maret.  
 - Jenis pakaian: Atasan, Jeans, Rok, Kaos.  
 - Satuan berat: kg, mg, ton, kwintal.  
@@ -176,9 +179,114 @@ mampu mengambil variabel sebagai legend jika direpresentasikan sebagai factor.
 ![](image/02.factor.png)
 
 menggunakan factor ketika:  
+
 + memastikan bahwa variable yang kita gunakan memiliki data terbatas (diskrit)  
 + dan menginformasikan kepastian ini kepada function atau model analisa yang kita gunakan
 
+## Kenapa Factor menjadi penting di R?
+> Banyak digunakan oleh fungsi analisa dan plotting di R  
+Digunakan oleh ggplot2 untuk legend  
+
+## Kapan harusnya menggunakan factor?
+> Ketika kita butuh pengolahan nilai diskrit  
+
+## Membuat Factor di R
+```{r Buatlah 1factor dengan isi nilai teks Jan, Feb, dan Mar}
+factor(c("Jan", "Feb", "Mar"))
+```
+
+## Atribut levels dan class pada Factor
+```{r Variable 2factor bernama faktor.bulan dengan nilai teks Jan, Feb, dan Mar}
+faktor.bulan <- factor(c("Jan", "Feb", "Mar")) # nolint
+attributes(faktor.bulan)
+```
+
+## Function levels dan class pada Factor
+```{r Variable 3factor bernama faktor.bulan dengan nilai teks Jan, Feb, dan Mar}
+faktor.bulan <- factor(c("Jan", "Feb", "Mar")) # nolint
+levels(faktor.bulan)
+class(faktor.bulan)
+```
+
+## Perulangan Nilai pada Factor
+```{r Buatlah factor dengan teks Jan, Feb, Mar,Jan,Mar, dan Jan}
+factor(c("Jan", "Feb", "Mar", "Jan", "Mar", "Jan"))
+```
+
+## Bagaimana sebenarnya Factor disimpan?
+factor sebenarnya memiliki 2 bagian:  
+
+- Vector yang berisi nilai angka bulat (integer).  
+- Vector yang berisi nilai-nilai kategori, ini disimpan dalam atribut levels – isinya selalu bertipe character / teks.
+
+![](image/02.factor02.png)  
+Proses dari terjemahan perintah di atas:
+
+1. R menerima perintah dengan function factor(c("Jan","Feb","Mar"))
+2. R akan mencari variasi nilai (levels) dan diurutkan – dalam hal ini pengurutan alfabet – dan dipetakan berdasarkan index yang bernilai integer.
+Disini nilai index 1 mewakili "Feb", 2 mewakili "Jan", dan 3 mewakili "Mar"
+3. Dari levels, nilai-nilai "Jan", "Feb", "Mar" dicari nilai index-nya dan dimasukkan sebagai nilai-nilai pada factor ( 2, 1, 3 ).
+
+![](image/02.factor03.png)  
+Penjelasan dari proses di atas:
+
+1. R menerima perintah dengan function factor(c("Jan","Feb","Mar","Jan","Mar"))
+2. R akan mencari variasi nilai (levels) dan diurutkan – dalam hal ini pengurutan alfabet – dan dipetakan berdasarkan index yang bernilai integer.Disini nilai index 1 mewakili "Feb", 2 mewakili "Jan", dan 3 mewakili "Mar"
+3. Dari levels, nilai-nilai "Jan", "Feb", "Mar","Jan","Mar" dicari nilai index-nya dan dimasukkan sebagai nilai-nilai pada factor ( 2, 1, 3, 2, 3).
+
+Dengan demikian, kita simpulkan kembali dari ilustrasi di atas bahwa nilai dari factor sebenarnya adalah nilai bilangan bulat (integer) dengan nilai-nilai kategoris disimpan pada atribut levels.
+
+## Penggunaan as.integer pada Factor
+```{r nilai index integer pada factor}
+factor.bulan <- factor(c("Jan", "Feb", "Mar", "Jan", "Mar", "Jan")) # nolint
+as.integer(factor.bulan)
+```
+
+## Mengganti "Jan" menjadi "Januari"
+```{r mengganti nilai levels pada index yang kita inginkan}
+factor.bulan <- factor(c("Jan", "Feb", "Mar", "Jan", "Mar", "Jan")) # nolint
+#Mengganti levels
+levels(factor.bulan)[2] <- "Januari" # nolint
+levels(factor.bulan)[3] <- "Maret" # nolint
+factor.bulan
+```
+
+## Angka sebagai Kategori
+```{r angka akan dikonversi menjadi teks}
+factor.umur <- factor(c(12, 35, 24, 12, 35, 37)) # nolint
+#Tampilkan variable factor.umur
+factor.umur
+```
+
+## NA, NaN, NULL pada saat pembentukan Factor
+```{r nilai NULL dibuang di tampilan isi factor, kemudian pada levels nilai NA juga dibuang}
+#Buatlah variable factor.lokasi dengan isi berupa
+#vector c("Bandung", "Jakarta", NA, "Jakarta", NaN, "Medan", NULL, NULL, "Bandung") # nolint
+factor.lokasi <- factor(c("Bandung", "Jakarta", NA, "Jakarta", NaN, "Medan", NULL, NULL, "Bandung")) # nolint
+#Tampilkan factor.lokasi
+factor.lokasi
+```
+
+## Menghitung panjang Factor dengan length
+```{r menggunakan function length}
+factor.lokasi <- factor(c("Bandung", "Jakarta", NA, "Jakarta", NaN, "Medan", NULL, NULL, "Bandung")) # nolint
+length(factor.lokasi)
+```
+
+## Menyusun levels dari awal
+```{r sort levels}
+factor(c("Jan", "Feb", "Mar", "Jan", "Mar"), levels = c("Jan", "Feb", "Mar"))
+```
+
+## Kesimpulan
+Factor adalah suatu tipe variabel yang intensif digunakan di R – dengan demikian menjadi sangat penting untuk mempelajari Factor ini.
+
++ Apa itu factor dan kenapa diperlukan?
++ Kapan factor digunakan
++ Cara membuat factor di R
++ Bagaimana sebenarnya nilai disimpan di dalam factor
++ Menggunakan function untuk merubah nilai factor
++ Merubah pengurutan di factor
 
 # Reading from Text and Excel File
 

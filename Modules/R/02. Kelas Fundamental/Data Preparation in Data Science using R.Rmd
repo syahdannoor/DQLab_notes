@@ -2,6 +2,7 @@
 title : "Apa itu Data Preparation atau Data Wrangling?"
 ---
 
+# Apa itu Data Preparation atau Data Wrangling?
 > "Data preparation accounts for about 80% of the work of data scientists"
 
 ![pie chart yang merepresentasikan porsi dari pekerjaan data scientist. Proses data preparation di chart ini adalah Collecting data sets (19%) dan Cleaning and organizing data (60%).](https://storage.googleapis.com/dqlab-image/images/data-scientist-survey.jpg)
@@ -68,22 +69,14 @@ lapply(isi.vector, typeof)
 is.na(isi.vector)
 ```
 
-NULL adalah suatu object khusus di R yang digunakan untuk merepresentasikan nilai atau object yang tidak terdefinisikan.
-
-```{r NULL}
-lapply(isi.vector, typeof)
-```
-
-```{r NULL}
-is.na(isi.vector)
-
-```
+## NULL 
+Null adalah suatu object khusus di R yang digunakan untuk merepresentasikan nilai atau object yang tidak terdefinisikan.
 
 ```{r NULL dan Vector}
 #Membuat vector dengan 7 elemen termasuk NA dan NULL
-isi.vector <- c(1, 2, 3, NA, 5, NULL, 7)
+isi_vector <- c(1, 2, 3, NA, 5, NULL, 7)
 #Menghitung jumlah elemen dari isi.vector
-length(isi.vector)
+length(isi_vector)
 ```
 
 ## Ringkasan Perbandingan NA & NULL
@@ -103,167 +96,97 @@ note:
 Salah satu operasi yang akan menghasilkan NULL adalah pada saat kita mengakses nama element yang tidak terdapat di dalam suatu list.
 
 ```{r NULL dan List}
-#Membuat list dengan 3 elemen termasuk NA dan NULL 
-isi.list <- list(1, NULL, 3, NA, 5)
+#Membuat list dengan 3 elemen termasuk NA dan NULL
+isi_list <- list(1, NULL, 3, NA, 5)
 
 #Menghitung jumlah elemen dari isi.list
-length(isi.list)
+length(isi_list)
 ```
 
 ```{r Inf untuk mewakili Infinite Number}
 #Hitung kalkulasi 5 dibagi dengan 0
-5/0
+5 / 0
 
 #Hitung kalkulasi -120 dibagi dengan 0
--120/0
-
+-120 / 0
 ```
-```{r }
-
+```{r NaN Not a Number}
+#Hitung kalkulasi 0 dibagi dengan 0
+0 / 0
 ```
-```{r }
-
+```{r NaN dari hasil function log()}
+#Hitung logaritma dari angka -1000
+log(-1000)
 ```
-```{r }
+```{r Fungsi is.nan}
+#Buat variable contoh.nan
+contoh_nan <- 0 / 0
 
+#Periksa dengan function is.nan
+is.nan(contoh_nan)
 ```
-```{r }
-
+```{r NaN dan is.na versus NA dan is.nan}
+#Masukkan code di bawah ini sesuai permintaan soal
+is.na(NaN)
+#is.nan(Na)
 ```
-```{r }
-
+```{r Menghitung Jumlah Missing Values dari satu Vector}
+#Masukkan code di bawah ini sesuai permintaan soal
+isi_vector <- c(1, 2, NA, 4, 5, NaN, 6)
+sum(is.na(isi_vector) == TRUE)
 ```
-```{r }
-
-```
+## Kesimpulan
++ Mengenal representasi missing value di R, yaitu NA (Not Available)
++ NA dan variasinya (NA_integer_, NA_real_, NA_complex_, dan NA_character_)
++ NULL sebagai representasi missing object
++ Perilaku NA dan NULL untuk vector dan list
++ NaN sebagai representasi missing value angka (Not a Number)
++ Penggunaan function is.na dan is.nan
 
 # Factor
-```{r }
 
-```
-```{r }
+## Pendahuluan
+Factor adalah suatu tipe variabel yang intensif digunakan di R  
++ Apa itu factor dan kenapa diperlukan?  
++ Kapan factor digunakan  
++ Cara membuat factor di R  
++ Bagaimana sebenarnya nilai disimpan di dalam factor  
++ Menggunakan function untuk merubah nilai factor  
++ Merubah pengurutan di factor  
 
-```
-```{r }
+## Apa itu Factor?
+> suatu variable di R yang menyimpan daftar nilai-nilai kategori atau nominal.
 
-```
-```{r }
+contoh daftar nilai kategori yang bisa disimpan dalam factor:  
+- Nama bulan: Januari, Februari, Maret.  
+- Jenis pakaian: Atasan, Jeans, Rok, Kaos.  
+- Satuan berat: kg, mg, ton, kwintal.  
+- dan lain-lain.
 
-```
-```{r }
+tidak bisa digolongkan sebagai factor.  
+sifat data dengan nilai terbatas.
 
-```
-```{r }
+## Kenapa Factor, dan Kapan Sebaiknya Digunakan?
+Factor, variabel yang sangat penting untuk digunakan pada kasus analisa 
+statistik, menggambar grafik (plotting), pemodelan regresi ataupun machine learning.
 
-```
-```{r }
+Sebagai contoh kasus, maka fungsi plotting pada library ggplot2 akan 
+mampu mengambil variabel sebagai legend jika direpresentasikan sebagai factor.
 
-```
-```{r }
+![](image/02.factor.png)
 
-```
-```{r }
+menggunakan factor ketika:  
++ memastikan bahwa variable yang kita gunakan memiliki data terbatas (diskrit)  
++ dan menginformasikan kepastian ini kepada function atau model analisa yang kita gunakan
 
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
 
 # Reading from Text and Excel File
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
 
 # Structure Transformation
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
-```{r }
-
-```
 
 # Penutup Data Wrangling Part 1
+
+# empty chunk
 ```{r }
 
 ```

@@ -289,7 +289,7 @@ Factor adalah suatu tipe variabel yang intensif digunakan di R – dengan demiki
 + Merubah pengurutan di factor
 
 # Reading from Text and Excel File
-
+## testing
 # Structure Transformation
 
 # Penutup Data Wrangling Part 1

@@ -289,12 +289,49 @@ Factor adalah suatu tipe variabel yang intensif digunakan di R – dengan demiki
 + Merubah pengurutan di factor
 
 # Reading from Text and Excel File
-## testing
+## dataset
+https://storage.googleapis.com/dqlab-dataset/dkikepadatankelurahan2013.csv
+or
+/data/dkikepadatankelurahan2013.csv
+
+| Komponen | Deskripsi |
+|:---:|:---:|
+| penduduk.dki | nama variabel yang digunakan untuk menampung data dari contoh dataset |
+| read.csv | function yang digunakan untuk membaca contoh dataset yang berupa file |
+| https://storage.googleapis.com/dqlab-dataset/dkikepadatankelurahan2013.csv | lokasi dataset yang terdapat di web DQLab. Jika lokasi file dan aplikasi R terdapat di komputer lokal Anda, maka gantilah dengan lokasi file di lokal. Misalkan "~/data/dkikepadatankelurahan2013.csv" |
+| sep="," ||
+
+## Membaca dataset csv
+```{r read.csv}
+penduduk.dki <- read.csv("https://storage.googleapis.com/dqlab-dataset/dkikepadatankelurahan2013.csv", sep=",")  # nolint
+penduduk.dki
+```
+
+## Profile Dataset dengan Function str
+```{r str()}
+penduduk.dki <- read.csv("https://storage.googleapis.com/dqlab-dataset/dkikepadatankelurahan2013.csv", sep=",")  # nolint
+str(penduduk.dki)
+```
+
+## Profile Dataset dengan Function summary
+```{r summary()}
+penduduk.dki <- read.csv("https://storage.googleapis.com/dqlab-dataset/dkikepadatankelurahan2013.csv", sep=",") #nolint
+summary(penduduk.dki)
+```
+
+## Menggunakan argumen check.names = FALSE
+```{r "check.names = FALSE"}
+penduduk.dki <- read.csv("https://storage.googleapis.com/dqlab-dataset/dkikepadatankelurahan2013.csv", sep=",", check.names = FALSE) #nolint
+str(penduduk.dki)
+```
+
+
+
 # Structure Transformation
 
 # Penutup Data Wrangling Part 1
 
 # empty chunk
 ```{r }
-
+ #nolint
 ```
